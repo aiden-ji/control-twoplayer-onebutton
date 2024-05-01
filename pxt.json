@@ -2,7 +2,9 @@
     "name": "Control-twoPlayer-oneButton",
     "description": "",
     "dependencies": {
-        "device": "*"
+        "device": "*",
+        "Timers": "github:microsoft/arcade-timers#v1.1.0",
+        "arcade-text": "github:microsoft/arcade-text#v1.3.0"
     },
     "files": [
         "main.blocks",
@@ -11,7 +13,9 @@
         "assets.json",
         "images.g.jres",
         "images.g.ts",
-        "main.py"
+        "main.py",
+        "tilemap.g.jres",
+        "tilemap.g.ts"
     ],
     "testFiles": [
         "test.ts"
@@ -23,5 +27,23 @@
     "supportedTargets": [
         "arcade"
     ],
-    "preferredEditor": "pyprj"
+    "preferredEditor": "blocksprj",
+    "palette": [
+        "#000000",
+        "#FFFFFF",
+        "#EDEDED",
+        "#DBDBDB",
+        "#C8C8C8",
+        "#B6B6B6",
+        "#A4A4A4",
+        "#929292",
+        "#808080",
+        "#6D6D6D",
+        "#5B5B5B",
+        "#494949",
+        "#373737",
+        "#242424",
+        "#121212",
+        "#000000"
+    ]
 }
