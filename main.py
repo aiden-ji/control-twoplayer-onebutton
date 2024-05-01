@@ -1,3 +1,7 @@
+def on_b_pressed():
+    game.reset()
+controller.B.on_event(ControllerButtonEvent.PRESSED, on_b_pressed)
+
 def on_a_pressed():
     global yellow_speed, blue_speed
     music.play(music.string_playable("C - - - C5 - - - ", 700),
@@ -83,7 +87,7 @@ yellow = sprites.create(assets.image("""
 """), SpriteKind.player)
 yellow.set_position(120, 30)
 blue = sprites.create(assets.image("""
-    myImage0
+    myImage3
 """), SpriteKind.player)
 blue.set_position(120, 80)
 controller.move_sprite(yellow, yellow_speed, yellow_speed)
