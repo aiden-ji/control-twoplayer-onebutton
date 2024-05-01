@@ -1,4 +1,4 @@
-// meta={"simUrl":"https://trg-arcade.userpxt.io/v1.12.51/---simulator","cdnUrl":"https://pxt.azureedge.net","version":"0.0.2","target":"arcade","targetVersion":"1.12.51","repo":"aiden-ji/control-twoplayer-onebutton"}
+// meta={"simUrl":"https://trg-arcade.userpxt.io/v1.12.51/---simulator","cdnUrl":"https://pxt.azureedge.net","version":"0.0.3","target":"arcade","targetVersion":"1.12.51","repo":"aiden-ji/control-twoplayer-onebutton"}
 // total=1522859 new=6.59% cached=87.87% other=5.53%
 (function (ectx) {
 'use strict';
@@ -474,7 +474,7 @@ const pxsim_pxtrt = pxsim.pxtrt;
 const pxsim_numops = pxsim.numops;
 
 
-function _main___P412801(s) {
+function _main___P413372(s) {
 let r0 = s.r0, step = s.pc;
 s.pc = -1;
 
@@ -912,42 +912,42 @@ switch (step) {
     s.tmp_0 = controller_Button_onEvent__P391013_mk(s);
     s.tmp_0.arg0 = globals.B___390931;
     s.tmp_0.arg1 = 2049;
-    s.tmp_0.arg2 = on_b_pressed__P412667;
+    s.tmp_0.arg2 = on_b_pressed__P413238;
     s.callLocIdx = 73; s.pc = 42; return s.tmp_0;
   case 42:
     r0 = s.retval;
     s.tmp_0 = controller_Button_onEvent__P391013_mk(s);
     s.tmp_0.arg0 = globals.A___390930;
     s.tmp_0.arg1 = 2049;
-    s.tmp_0.arg2 = on_a_pressed__P412672;
+    s.tmp_0.arg2 = on_a_pressed__P413243;
     s.callLocIdx = 98; s.pc = 43; return s.tmp_0;
   case 43:
     r0 = s.retval;
-    globals.blue_speed___412678 = (0);
-    globals.blue___412686 = (null);
-    globals.yellow___412692 = (null);
-    globals.yellow_speed___412681 = (0);
-    globals.myAniY___412706 = (null);
+    globals.blue_speed___413249 = (0);
+    globals.yellow___413263 = (null);
+    globals.blue___413257 = (null);
+    globals.yellow_speed___413252 = (0);
+    globals.myAniY___413277 = (null);
     s.tmp_0 = sprites_create__P391092_mk(s);
-    r0 = pxsim.image.ofBuffer(_hex412747);
+    r0 = pxsim.image.ofBuffer(_hex413318);
     s.tmp_0.arg0 = r0;
     s.tmp_0.arg1 = globals.Player___391297;
     s.callLocIdx = 99; s.pc = 44; return s.tmp_0;
   case 44:
     r0 = s.retval;
-    globals.myAniY___412706 = (r0);
+    globals.myAniY___413277 = (r0);
     s.tmp_0 = sprites_create__P391092_mk(s);
-    r0 = pxsim.image.ofBuffer(_hex412753);
+    r0 = pxsim.image.ofBuffer(_hex413324);
     s.tmp_0.arg0 = r0;
     s.tmp_0.arg1 = globals.Player___391297;
     s.callLocIdx = 100; s.pc = 45; return s.tmp_0;
   case 45:
     r0 = s.retval;
-    globals.myAniB___412750 = (r0);
-    globals.yellow_speed___412681 = (100);
+    globals.myAniB___413321 = (r0);
+    globals.yellow_speed___413252 = (100);
     s.tmp_0 = sprites_create__P391092_mk(s);
     s.tmp_1 = helpers_getImageByName__P392153_mk(s);
-    s.tmp_1.arg0 = "\n    myImage\n";
+    s.tmp_1.arg0 = "\n    myImage3\n";
     s.callLocIdx = 101; s.pc = 47; return s.tmp_1;
   case 47:
     r0 = s.retval;
@@ -956,17 +956,17 @@ switch (step) {
     s.callLocIdx = 102; s.pc = 46; return s.tmp_0;
   case 46:
     r0 = s.retval;
-    globals.yellow___412692 = (r0);
+    globals.blue___413257 = (r0);
     s.tmp_0 = Sprite_setPosition__P391226_mk(s);
-    s.tmp_0.arg0 = globals.yellow___412692;
+    s.tmp_0.arg0 = globals.blue___413257;
     s.tmp_0.arg1 = 120;
-    s.tmp_0.arg2 = 30;
+    s.tmp_0.arg2 = 80;
     s.callLocIdx = 103; s.pc = 48; return s.tmp_0;
   case 48:
     r0 = s.retval;
     s.tmp_0 = sprites_create__P391092_mk(s);
     s.tmp_1 = helpers_getImageByName__P392153_mk(s);
-    s.tmp_1.arg0 = "\n    myImage3\n";
+    s.tmp_1.arg0 = "\n    myImage\n";
     s.callLocIdx = 104; s.pc = 50; return s.tmp_1;
   case 50:
     r0 = s.retval;
@@ -975,29 +975,29 @@ switch (step) {
     s.callLocIdx = 105; s.pc = 49; return s.tmp_0;
   case 49:
     r0 = s.retval;
-    globals.blue___412686 = (r0);
+    globals.yellow___413263 = (r0);
     s.tmp_0 = Sprite_setPosition__P391226_mk(s);
-    s.tmp_0.arg0 = globals.blue___412686;
+    s.tmp_0.arg0 = globals.yellow___413263;
     s.tmp_0.arg1 = 120;
-    s.tmp_0.arg2 = 80;
+    s.tmp_0.arg2 = 30;
     s.callLocIdx = 106; s.pc = 51; return s.tmp_0;
   case 51:
     r0 = s.retval;
     s.tmp_0 = controller_moveSprite__P390984_mk(s);
-    s.tmp_0.arg0 = globals.yellow___412692;
-    s.tmp_0.arg1 = globals.yellow_speed___412681;
-    s.tmp_0.arg2 = globals.yellow_speed___412681;
+    s.tmp_0.arg0 = globals.yellow___413263;
+    s.tmp_0.arg1 = globals.yellow_speed___413252;
+    s.tmp_0.arg2 = globals.yellow_speed___413252;
     s.callLocIdx = 107; s.pc = 52; return s.tmp_0;
   case 52:
     r0 = s.retval;
     s.tmp_0 = Sprite_setStayInScreen__P391234_mk(s);
-    s.tmp_0.arg0 = globals.yellow___412692;
+    s.tmp_0.arg0 = globals.yellow___413263;
     s.tmp_0.arg1 = true;
     s.callLocIdx = 108; s.pc = 53; return s.tmp_0;
   case 53:
     r0 = s.retval;
     s.tmp_0 = Sprite_setStayInScreen__P391234_mk(s);
-    s.tmp_0.arg0 = globals.blue___412686;
+    s.tmp_0.arg0 = globals.blue___413257;
     s.tmp_0.arg1 = true;
     s.callLocIdx = 109; s.pc = 54; return s.tmp_0;
   case 54:
@@ -1009,9 +1009,9 @@ switch (step) {
     s.callLocIdx = 110; s.pc = 55; return s.tmp_0;
   case 55:
     r0 = s.retval;
-    globals.textSprite___412779 = (r0);
+    globals.textSprite___413350 = (r0);
     s.tmp_0 = Sprite_setPosition__P391226_mk(s);
-    s.tmp_0.arg0 = globals.textSprite___412779;
+    s.tmp_0.arg0 = globals.textSprite___413350;
     s.tmp_0.arg1 = 80;
     s.tmp_0.arg2 = 110;
     s.callLocIdx = 111; s.pc = 56; return s.tmp_0;
@@ -1021,13 +1021,13 @@ switch (step) {
     return leave(s, r0)
   default: oops()
 } } }
-_main___P412801.info = {"start":0,"length":0,"line":0,"column":0,"endLine":0,"endColumn":0,"fileName":"pxt_modules/Timers/main.ts","functionName":"<main>","argumentNames":[]}
-_main___P412801.continuations = [  ]
+_main___P413372.info = {"start":0,"length":0,"line":0,"column":0,"endLine":0,"endColumn":0,"fileName":"pxt_modules/Timers/main.ts","functionName":"<main>","argumentNames":[]}
+_main___P413372.continuations = [  ]
 
-function _main___P412801_mk(s) {
+function _main___P413372_mk(s) {
     checkStack(s.depth);
     return {
-        parent: s, fn: _main___P412801, depth: s.depth + 1,
+        parent: s, fn: _main___P413372, depth: s.depth + 1,
         pc: 0, retval: undefined, r0: undefined, overwrittenPC: false, lambdaArgs: null,
   tmp_0: undefined,
   tmp_1: undefined,
@@ -1057,8 +1057,8 @@ const _hex394056 = pxsim.BufferMethods.createBufferFromHex("87042000200000000000
 const _hex394058 = pxsim.BufferMethods.createBufferFromHex("87042000200000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000004004000000000000000000000000000054450000000000000000000000440b00bbbb00b0440000000000000040550b00000000b0550400000000000040b5000044bb00005b04000000000000b00b0044ddddbb00b00b0000000000000000405d55d5dd0b00000000000000000000d4555555ddbd0000000000000000000054555555d5bd0000000000000000b44055555555d5dd0b4b000000000040b54055555555d5dd0b5b040000000040b54055555555d5dd0b5b040000000000b44055115555d5dd0b4b000000000000000054115555d5bd00000000000000000000d4555555ddbd00000000000000000000405d55d5dd0b0000000000000000b00b0044ddddbb00b00b00000000000040b5000044bb00005b0400000000000040550b00000000b0550400000000000000440b00bbbb00b0440000000000000000000000544500000000000000000000000000004004000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000")
 const _hex394060 = pxsim.BufferMethods.createBufferFromHex("870420002000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000bbbb00000000000000000000000000b055bb00bbbbbb000000000000000000b0b5bdbcbbbbddcb0000000000000000b0dbcb5b5555bbdd0c00000000000000b0cbdcbdbb5b55dbcd0000000000000000c0dddb11d15bb5bd0c00000000000000bbbd111111b155bb0c00000000000000db1b111111115bb5cb00000000000000db1bb11d1199b9d5cb00000000000000db1b11bb9199b955cb000000000000005b1b11b19b99995bcb000000000000005b1d1111bb99995ccb00000000000000b0b511bbbb99995ccb00000000000000b0d51d919999d95b0b00000000000000005bdb919999c9d50b0000000000000000b0d51b99d9bcb5000000000000000000005bd5bbbc550b00000000000000000000b05b5555bd000000000000000000000000b0bbbb00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000")
 const _hex395870 = pxsim.BufferMethods.createBufferFromHex("87041000100000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000")
-const _hex412747 = pxsim.BufferMethods.createBufferFromHex("87041000100000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000")
-const _hex412753 = pxsim.BufferMethods.createBufferFromHex("87041000100000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000")
+const _hex413318 = pxsim.BufferMethods.createBufferFromHex("87041000100000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000")
+const _hex413324 = pxsim.BufferMethods.createBufferFromHex("87041000100000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000")
 
 
 
@@ -1872,7 +1872,7 @@ function myTiles_inline__P395874_mk(s) {
 
 
 
-function on_b_pressed__P412667(s) {
+function on_b_pressed__P413238(s) {
 let r0 = s.r0, step = s.pc;
 s.pc = -1;
 
@@ -1890,12 +1890,12 @@ switch (step) {
     return leave(s, r0)
   default: oops()
 } } }
-on_b_pressed__P412667.info = {"start":52,"length":44,"line":0,"column":52,"endLine":2,"endColumn":1,"fileName":"main.ts","functionName":"on_b_pressed","argumentNames":[]}
+on_b_pressed__P413238.info = {"start":52,"length":44,"line":0,"column":52,"endLine":2,"endColumn":1,"fileName":"main.ts","functionName":"on_b_pressed","argumentNames":[]}
 
-function on_b_pressed__P412667_mk(s) {
+function on_b_pressed__P413238_mk(s) {
     checkStack(s.depth);
     return {
-        parent: s, fn: on_b_pressed__P412667, depth: s.depth + 1,
+        parent: s, fn: on_b_pressed__P413238, depth: s.depth + 1,
         pc: 0, retval: undefined, r0: undefined, overwrittenPC: false, lambdaArgs: null,
   tmp_0: undefined,
 } }
@@ -1904,7 +1904,7 @@ function on_b_pressed__P412667_mk(s) {
 
 
 
-function on_a_pressed__P412672(s) {
+function on_a_pressed__P413243(s) {
 let r0 = s.r0, step = s.pc;
 s.pc = -1;
 
@@ -1926,28 +1926,28 @@ switch (step) {
     s.callLocIdx = 75; s.pc = 3; return s.tmp_0;
   case 3:
     r0 = s.retval;
-    r0 = (globals.blue_speed___412678 == 0);
+    r0 = (globals.blue_speed___413249 == 0);
     s.tmp_0 = r0;
     r0 = pxsim_numops_toBoolDecr(s.tmp_0);
     if (!r0) { step = 1; continue; }
-    globals.yellow_speed___412681 = (0);
-    globals.blue_speed___412678 = (100);
+    globals.yellow_speed___413252 = (0);
+    globals.blue_speed___413249 = (100);
     s.tmp_0 = controller_moveSprite__P390984_mk(s);
-    s.tmp_0.arg0 = globals.blue___412686;
-    s.tmp_0.arg1 = globals.blue_speed___412678;
-    s.tmp_0.arg2 = globals.blue_speed___412678;
+    s.tmp_0.arg0 = globals.blue___413257;
+    s.tmp_0.arg1 = globals.blue_speed___413249;
+    s.tmp_0.arg2 = globals.blue_speed___413249;
     s.callLocIdx = 76; s.pc = 5; return s.tmp_0;
   case 5:
     r0 = s.retval;
     s.tmp_0 = controller_moveSprite__P390984_mk(s);
-    s.tmp_0.arg0 = globals.yellow___412692;
-    s.tmp_0.arg1 = globals.yellow_speed___412681;
-    s.tmp_0.arg2 = globals.yellow_speed___412681;
+    s.tmp_0.arg0 = globals.yellow___413263;
+    s.tmp_0.arg1 = globals.yellow_speed___413252;
+    s.tmp_0.arg2 = globals.yellow_speed___413252;
     s.callLocIdx = 77; s.pc = 6; return s.tmp_0;
   case 6:
     r0 = s.retval;
     s.tmp_0 = Sprite_setImage__P391208_mk(s);
-    s.tmp_0.arg0 = globals.yellow___412692;
+    s.tmp_0.arg0 = globals.yellow___413263;
     s.tmp_1 = helpers_getImageByName__P392153_mk(s);
     s.tmp_1.arg0 = "\n            myImage1\n        ";
     s.callLocIdx = 78; s.pc = 8; return s.tmp_1;
@@ -1958,7 +1958,7 @@ switch (step) {
   case 7:
     r0 = s.retval;
     s.tmp_0 = Sprite_setImage__P391208_mk(s);
-    s.tmp_0.arg0 = globals.blue___412686;
+    s.tmp_0.arg0 = globals.blue___413257;
     s.tmp_1 = helpers_getImageByName__P392153_mk(s);
     s.tmp_1.arg0 = "\n            myImage0\n        ";
     s.callLocIdx = 80; s.pc = 10; return s.tmp_1;
@@ -1969,15 +1969,15 @@ switch (step) {
   case 9:
     r0 = s.retval;
     s.tmp_0 = Sprite_setPosition__P391226_mk(s);
-    s.tmp_0.arg0 = globals.myAniY___412706;
+    s.tmp_0.arg0 = globals.myAniY___413277;
     s.tmp_1 = Sprite_x__P391171_mk(s);
-    s.tmp_1.arg0 = globals.yellow___412692;
+    s.tmp_1.arg0 = globals.yellow___413263;
     s.callLocIdx = 82; s.pc = 12; return s.tmp_1;
   case 12:
     r0 = s.retval;
     s.tmp_0.arg1 = r0;
     s.tmp_2 = Sprite_y__P391173_mk(s);
-    s.tmp_2.arg0 = globals.yellow___412692;
+    s.tmp_2.arg0 = globals.yellow___413263;
     s.callLocIdx = 83; s.pc = 13; return s.tmp_2;
   case 13:
     r0 = s.retval;
@@ -1986,7 +1986,7 @@ switch (step) {
   case 11:
     r0 = s.retval;
     s.tmp_0 = animation_runImageAnimation__P392179_mk(s);
-    s.tmp_0.arg0 = globals.myAniY___412706;
+    s.tmp_0.arg0 = globals.myAniY___413277;
     s.tmp_1 = helpers_getAnimationByName__P392154_mk(s);
     s.tmp_1.arg0 = "\n            myAnim\n        ";
     s.callLocIdx = 85; s.pc = 15; return s.tmp_1;
@@ -2000,24 +2000,24 @@ switch (step) {
     r0 = s.retval;
     { step = 2; continue; }
   case 1:
-    globals.yellow_speed___412681 = (100);
-    globals.blue_speed___412678 = (0);
+    globals.yellow_speed___413252 = (100);
+    globals.blue_speed___413249 = (0);
     s.tmp_0 = controller_moveSprite__P390984_mk(s);
-    s.tmp_0.arg0 = globals.blue___412686;
-    s.tmp_0.arg1 = globals.blue_speed___412678;
-    s.tmp_0.arg2 = globals.blue_speed___412678;
+    s.tmp_0.arg0 = globals.blue___413257;
+    s.tmp_0.arg1 = globals.blue_speed___413249;
+    s.tmp_0.arg2 = globals.blue_speed___413249;
     s.callLocIdx = 87; s.pc = 16; return s.tmp_0;
   case 16:
     r0 = s.retval;
     s.tmp_0 = controller_moveSprite__P390984_mk(s);
-    s.tmp_0.arg0 = globals.yellow___412692;
-    s.tmp_0.arg1 = globals.yellow_speed___412681;
-    s.tmp_0.arg2 = globals.yellow_speed___412681;
+    s.tmp_0.arg0 = globals.yellow___413263;
+    s.tmp_0.arg1 = globals.yellow_speed___413252;
+    s.tmp_0.arg2 = globals.yellow_speed___413252;
     s.callLocIdx = 88; s.pc = 17; return s.tmp_0;
   case 17:
     r0 = s.retval;
     s.tmp_0 = Sprite_setImage__P391208_mk(s);
-    s.tmp_0.arg0 = globals.blue___412686;
+    s.tmp_0.arg0 = globals.blue___413257;
     s.tmp_1 = helpers_getImageByName__P392153_mk(s);
     s.tmp_1.arg0 = "\n            myImage2\n        ";
     s.callLocIdx = 89; s.pc = 19; return s.tmp_1;
@@ -2028,7 +2028,7 @@ switch (step) {
   case 18:
     r0 = s.retval;
     s.tmp_0 = Sprite_setImage__P391208_mk(s);
-    s.tmp_0.arg0 = globals.yellow___412692;
+    s.tmp_0.arg0 = globals.yellow___413263;
     s.tmp_1 = helpers_getImageByName__P392153_mk(s);
     s.tmp_1.arg0 = "\n            myImage\n        ";
     s.callLocIdx = 91; s.pc = 21; return s.tmp_1;
@@ -2039,15 +2039,15 @@ switch (step) {
   case 20:
     r0 = s.retval;
     s.tmp_0 = Sprite_setPosition__P391226_mk(s);
-    s.tmp_0.arg0 = globals.myAniY___412706;
+    s.tmp_0.arg0 = globals.myAniY___413277;
     s.tmp_1 = Sprite_x__P391171_mk(s);
-    s.tmp_1.arg0 = globals.blue___412686;
+    s.tmp_1.arg0 = globals.blue___413257;
     s.callLocIdx = 93; s.pc = 23; return s.tmp_1;
   case 23:
     r0 = s.retval;
     s.tmp_0.arg1 = r0;
     s.tmp_2 = Sprite_y__P391173_mk(s);
-    s.tmp_2.arg0 = globals.blue___412686;
+    s.tmp_2.arg0 = globals.blue___413257;
     s.callLocIdx = 94; s.pc = 24; return s.tmp_2;
   case 24:
     r0 = s.retval;
@@ -2056,7 +2056,7 @@ switch (step) {
   case 22:
     r0 = s.retval;
     s.tmp_0 = animation_runImageAnimation__P392179_mk(s);
-    s.tmp_0.arg0 = globals.myAniY___412706;
+    s.tmp_0.arg0 = globals.myAniY___413277;
     s.tmp_1 = helpers_getAnimationByName__P392154_mk(s);
     s.tmp_1.arg0 = "\n            myAnim0\n        ";
     s.callLocIdx = 96; s.pc = 26; return s.tmp_1;
@@ -2073,12 +2073,12 @@ switch (step) {
     return leave(s, r0)
   default: oops()
 } } }
-on_a_pressed__P412672.info = {"start":150,"length":1103,"line":3,"column":52,"endLine":38,"endColumn":1,"fileName":"main.ts","functionName":"on_a_pressed","argumentNames":[]}
+on_a_pressed__P413243.info = {"start":150,"length":1103,"line":3,"column":52,"endLine":38,"endColumn":1,"fileName":"main.ts","functionName":"on_a_pressed","argumentNames":[]}
 
-function on_a_pressed__P412672_mk(s) {
+function on_a_pressed__P413243_mk(s) {
     checkStack(s.depth);
     return {
-        parent: s, fn: on_a_pressed__P412672, depth: s.depth + 1,
+        parent: s, fn: on_a_pressed__P413243, depth: s.depth + 1,
         pc: 0, retval: undefined, r0: undefined, overwrittenPC: false, lambdaArgs: null,
   tmp_0: undefined,
   tmp_1: undefined,
@@ -51199,7 +51199,7 @@ const sprites_BaseSpriteSayRenderer__C391076_VT = mkVTable({
   },
 });
 
-const breakpoints = setupDebugger(1, ["transparency16___393177","blue_speed___412678","yellow_speed___412681","blue___412686","yellow___412692","myAniY___412706","myAniB___412750","textSprite___412779"])
+const breakpoints = setupDebugger(1, ["transparency16___393177","blue_speed___413249","yellow_speed___413252","blue___413257","yellow___413263","myAniY___413277","myAniB___413321","textSprite___413350"])
 
-return _main___P412801
+return _main___P413372
 })
