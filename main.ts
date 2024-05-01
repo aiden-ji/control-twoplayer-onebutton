@@ -38,8 +38,8 @@ controller.A.onEvent(ControllerButtonEvent.Pressed, function on_a_pressed() {
     
 })
 let blue_speed = 0
-let blue : Sprite = null
 let yellow : Sprite = null
+let blue : Sprite = null
 let yellow_speed = 0
 let myAniY : Sprite = null
 myAniY = sprites.create(img`
@@ -79,14 +79,14 @@ let myAniB = sprites.create(img`
             . . . . . . . . . . . . . . . .
     `, SpriteKind.Player)
 yellow_speed = 100
-yellow = sprites.create(assets.image`
-    myImage
-`, SpriteKind.Player)
-yellow.setPosition(120, 30)
 blue = sprites.create(assets.image`
     myImage3
 `, SpriteKind.Player)
 blue.setPosition(120, 80)
+yellow = sprites.create(assets.image`
+    myImage
+`, SpriteKind.Player)
+yellow.setPosition(120, 30)
 controller.moveSprite(yellow, yellow_speed, yellow_speed)
 yellow.setStayInScreen(true)
 blue.setStayInScreen(true)

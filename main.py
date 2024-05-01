@@ -39,8 +39,8 @@ def on_a_pressed():
 controller.A.on_event(ControllerButtonEvent.PRESSED, on_a_pressed)
 
 blue_speed = 0
-blue: Sprite = None
 yellow: Sprite = None
+blue: Sprite = None
 yellow_speed = 0
 myAniY: Sprite = None
 myAniY = sprites.create(img("""
@@ -82,14 +82,14 @@ myAniB = sprites.create(img("""
     """),
     SpriteKind.player)
 yellow_speed = 100
-yellow = sprites.create(assets.image("""
-    myImage
-"""), SpriteKind.player)
-yellow.set_position(120, 30)
 blue = sprites.create(assets.image("""
     myImage3
 """), SpriteKind.player)
 blue.set_position(120, 80)
+yellow = sprites.create(assets.image("""
+    myImage
+"""), SpriteKind.player)
+yellow.set_position(120, 30)
 controller.move_sprite(yellow, yellow_speed, yellow_speed)
 yellow.set_stay_in_screen(True)
 blue.set_stay_in_screen(True)
